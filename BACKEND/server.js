@@ -25,6 +25,10 @@ require("dotenv").config();
     console.log("Mongodb connection succuss!");
  })
 
+ const studentRouter = require("./routes/students.js");
+
+ app.use("/student",studentRouter);
+
  app.listen(PORT,()=>{
     console.log(`Server is up and running on port number: ${PORT}`)
  })
